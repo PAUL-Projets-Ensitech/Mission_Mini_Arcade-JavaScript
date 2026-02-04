@@ -1,0 +1,93 @@
+:root {
+	--bg: #1b1b3a;
+	--card: #2b2b5f;
+	--text: #ffffff;
+	--muted: #d6d6f5;
+	--accent: #ff4fd8;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: var(--bg);
+	color: var(--text);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	text-align: center;
+	padding: 32px 16px 16px;
+}
+
+header h1 {
+	margin-bottom: 8px;
+}
+
+header h2 {
+	color: var(--muted);
+	font-weight: normal;
+}
+
+.nav-principale {
+	margin-top: 12px;
+}
+
+.nav-liens {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.nav-liens a {
+	color: var(--text);
+	text-decoration: none;
+	background: #3b3b7a;
+	padding: 6px 12px;
+	border-radius: 6px;
+}
+
+main {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	padding: 24px 16px;
+}
+
+.cartes-jeux {
+	width: 100%;
+	max-width: 700px;
+}
+
+.listes-jeux {
+	background: var(--card);
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.listes-jeux p {
+	color: var(--muted);
+	margin: 8px 0 12px;
+}
+
+.btn-play {
+	display: inline-block;
+	background: var(--accent);
+	color: white;
+	text-decoration: none;
+	padding: 8px 14px;
+	border-radius: 6px;
+}
+
+footer {
+	text-align: center;
+	padding: 12px;
+	color: var(--muted);
+}
