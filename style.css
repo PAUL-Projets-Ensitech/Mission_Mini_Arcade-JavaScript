@@ -27,6 +27,7 @@ header h1 {
 }
 
 header h2 {
+	font-family: 'Comic Sans MS', cursive;
 	font-weight: 700;
 	font-size: 1.1rem;
 	color: #FFFFFFDD;
