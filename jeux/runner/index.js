@@ -15,7 +15,7 @@ const cleMeilleurScore = 'runnerBestScore';
 let meilleurScore = Number(localStorage.getItem(cleMeilleurScore)) || 0;
 
 const afficherScores = () => {
-	affichageScore.textContent = `Score : ${score} | Meilleur : ${meilleurScore}`;
+	affichageScore.textContent = `Points : ${score} | Record : ${meilleurScore}`;
 };
 
 const sauter = () => {
