@@ -57,7 +57,9 @@ header h2 {
 main {
 	flex: 1;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
 	padding: 24px 16px;
 }
 
@@ -78,13 +80,28 @@ main {
 }
 
 .btn-play {
-	display: inline-block;
-	background: var(--accent);
+	background: #7986cb;
+	font-size: 14px;
 	color: white;
+	border-radius: 10px;
+	box-shadow: 0 7px 0px #3f51b5;
+	display: inline-block;
+	transition: all 0.2s;
+	position: relative;
+	padding: 10px 15px;
+	position: relative;
+	top: 0;
+	cursor: pointer;
+	margin: 0 10px;
 	text-decoration: none;
-	padding: 8px 14px;
-	border-radius: 6px;
 }
+
+.btn-11:active {
+	top: 3px;
+	box-shadow: 0 2px 0px #3f51b5;
+	transition: all .2s;
+}
+
 
 footer {
 	text-align: center;
