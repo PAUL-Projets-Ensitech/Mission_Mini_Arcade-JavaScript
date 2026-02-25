@@ -1,11 +1,3 @@
-:root {
-	--bg: #1b1b3a;
-	--card: #2b2b5f;
-	--text: #ffffff;
-	--muted: #d6d6f5;
-	--accent: #ff4fd8;
-}
-
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -14,8 +6,8 @@
 
 body {
 	font-family: Arial, sans-serif;
-	background: var(--bg);
-	color: var(--text);
+	background: #74B9FF;
+	color: #2D3436;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -31,27 +23,8 @@ header h1 {
 }
 
 header h2 {
-	color: var(--muted);
+	color: #636E72;
 	font-weight: normal;
-}
-
-.nav-principale {
-	margin-top: 12px;
-}
-
-.nav-liens {
-	list-style: none;
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-}
-
-.nav-liens a {
-	color: var(--text);
-	text-decoration: none;
-	background: #3b3b7a;
-	padding: 6px 12px;
-	border-radius: 6px;
 }
 
 main {
@@ -69,22 +42,22 @@ main {
 }
 
 .listes-jeux {
-	background: var(--card);
+	background: #FFFFFF;
 	border-radius: 10px;
 	padding: 20px;
 }
 
 .listes-jeux p {
-	color: var(--muted);
+	color: #636E72;
 	margin: 8px 0 12px;
 }
 
 .btn-play {
-	background: #7986cb;
+	background: #00B894;
 	font-size: 14px;
-	color: white;
+	color: #FFFFFF;
 	border-radius: 10px;
-	box-shadow: 0 7px 0px #3f51b5;
+	box-shadow: 0 7px 0px #008E76;
 	display: inline-block;
 	transition: all 0.2s;
 	position: relative;
@@ -98,13 +71,27 @@ main {
 
 .btn-play:active {
 	top: 3px;
-	box-shadow: 0 2px 0px #3f51b5;
+	box-shadow: 0 2px 0px #008E76;
 	transition: all .2s;
 }
 
+.btn-retour {
+	display: inline-block;
+	background: #FF9F43;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 8px 14px;
+	border-radius: 6px;
+	margin: 16px;
+}
+
+.btn-retour:hover {
+	background: #E17055;
+	transition: ease-in-out 0.2s;
+}
 
 footer {
 	text-align: center;
 	padding: 12px;
-	color: var(--muted);
+	color: #636E72;
 }
