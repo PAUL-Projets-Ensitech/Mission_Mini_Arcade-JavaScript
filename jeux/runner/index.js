@@ -11,6 +11,13 @@ let score = 0;
 let minuteurCollision = null;
 let minuteurScore = null;
 
+const cleMeilleurScore = 'runnerBestScore';
+let meilleurScore = Number(localStorage.getItem(cleMeilleurScore)) || 0;
+
+const afficherScores = () => {
+	affichageScore.textContent = `Score : ${score} | Meilleur : ${meilleurScore}`;
+};
+
 const sauter = () => {
 	if (enSaut || partieTerminee) {
 		return;
@@ -27,7 +34,7 @@ const demarrerPartie = () => {
 	partieTerminee = false;
 	score = 0;
 	affichageStatut.textContent = '';
-	affichageScore.textContent = 'Score : 0';
+	afficherScores();
 	enSaut = false;
 	joueur.classList.remove('jump');
 	obstacle.classList.remove('moving');
@@ -77,7 +84,7 @@ const demarrerPartie = () => {
 	minuteurScore = setInterval(() => {
 		if (!partieTerminee) {
 			score += 1;
-			affichageScore.textContent = `Score : ${score}`;
+			afficherScores();
 		}
 	}, 200);
 };
@@ -86,6 +93,11 @@ const terminerPartie = () => {
 	partieTerminee = true;
 	obstacle.style.animationPlayState = 'paused';
 	affichageStatut.textContent = 'Perdu... Clique sur le bouton pour rejouer.';
+	if (score > meilleurScore) {
+		meilleurScore = score;
+		localStorage.setItem(cleMeilleurScore, String(meilleurScore));
+		afficherScores();
+	}
 	clearInterval(minuteurCollision);
 	clearInterval(minuteurScore);
 };
@@ -101,3 +113,4 @@ zoneJeu.addEventListener('click', sauter);
 boutonRejouer.addEventListener('click', demarrerPartie);
 
 affichageStatut.textContent = 'Clique sur Jouer pour commencer !';
+afficherScores();
